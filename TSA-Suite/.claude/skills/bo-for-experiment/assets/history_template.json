@@ -1,0 +1,14 @@
+{
+  "task_id": "BO20260415_143022",
+  "created_at": "2026-04-15T14:30:22",
+  "description": "用户原始自然语言描述（原文保留）",
+  "params_config": [
+    {"name": "temperature", "type": "num", "lb": 200, "ub": 400},
+    {"name": "pressure",    "type": "num", "lb": 1,   "ub": 10}
+  ],
+  "objectives": [
+    {"name": "conversion_rate", "direction": "max", "description": "反应转化率"}
+  ],
+  "constraints": [],
+  "records": []
+}

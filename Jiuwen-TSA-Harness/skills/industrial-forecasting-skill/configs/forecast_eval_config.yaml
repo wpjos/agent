@@ -1,0 +1,10 @@
+# 时序预测评价配置
+# 用于 python -m tsas.engine.operator.cli evaluation run
+operators:
+  - name: "forecasting_metrics"
+    truth_columns: ["y_true"]
+    predict_columns: ["y_pred"]
+    config:
+      naive_error: 0.01
+      epsilon: 0.00000001
+      max_dtw_len: 2000

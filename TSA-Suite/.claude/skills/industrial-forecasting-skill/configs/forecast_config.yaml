@@ -1,0 +1,63 @@
+# 时序预测算子配置
+# 用于 python -m tsas.engine.operator.cli forecasting fit/run
+operator:
+  name: "itransformer_forecaster"
+  # 与 generate_synthetic_data.py 中 FEATURE_COLS + TARGET_COL 保持一致
+  input_columns:
+    - "diya_qibao_shuiwei"
+    - "diya_qibao_shuiwei_youxuanzhi"
+    - "diya_qibao_shuiwei_celiang_waihuan"
+    - "diya_qibao_shuiwei_mubiao_pid"
+    - "ningjie_shuiliuliang_1"
+    - "ningjie_shuiliuliang_2"
+    - "ningjie_shuiliuliang_youxuanzhi"
+    - "ningjie_shuiliuliang_celiang_neihuan"
+    - "ningjie_shuiliuliang_mubiao_pid"
+    - "gaoya_geishuiliuliang_1"
+    - "gaoya_geishuiliuliang_2"
+    - "gaoya_geishuiliuliang_3"
+    - "gaoya_geishuiliuliang_youxuanzhi"
+    - "chuyangqi_tiaojiefa_weizhifankui"
+    - "chuyangqi_tiaojiefa_pid_sheding"
+    - "ranji_fuhe"
+    - "qiji_fuhe"
+    - "chuyangqi_rukou_yali"
+    - "diya_qibao_yali_1"
+    - "diya_qibao_yali_2"
+    - "diya_qibao_yali_3"
+    - "diya_qibao_yali_youxuanzhi"
+    - "diya_zhuqiliuliang_youxuanzhi"
+    - "gaoya_jianwenshui_liuliang"
+    - "ranji_paiqi_wendu"
+    - "mubiao_diya_qibao_shuiwei"
+    - "pidzidong_shoudong"
+    - "gongkuang"
+    - "target_shuiwei_chazhi"
+  config:
+    seq_len: 100
+    pred_len: 20
+    d_model: 64
+    nhead: 2
+    num_layers: 1
+    dim_feedforward: 128
+    dropout: 0.1
+    lag_aware: true
+    lag_max: 8
+    lag_bias_scale: 2.0
+    lag_dropout: 0.1
+    kan_grid_size: 3
+    target_idx: -1
+    epochs: 10
+    batch_size: 32
+    lr: 0.001
+    weight_decay: 0.00001
+    early_stop_patience: 5
+    train_ratio: 0.7
+    val_ratio: 0.15
+    trend_weight: 1.0
+    time_weight_start: 0.1
+    time_weight_end: 1.0
+    max_grad_norm: 1.0
+    scheduler_factor: 0.5
+    scheduler_patience: 3
+    device: cpu

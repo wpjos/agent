@@ -1,0 +1,4 @@
+interface:
+  display_name: "bo4experiment"
+  short_description: "贝叶斯优化闭环实验助手：从自然语言定义实验空间，到基于历史数据持续推荐下一组实验参数。"
+  default_prompt: "Use $bo4experiment to initialize an experiment optimization task or recommend next experiment parameters based on historical observations."

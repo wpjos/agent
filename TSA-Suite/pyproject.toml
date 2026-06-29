@@ -1,0 +1,70 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tsa-suite"
+version = "0.1.1"
+description = "TSA-Suite: A modular anomaly detection framework with four-layer operator architecture"
+requires-python = ">=3.11"
+keywords = ["anomaly-detection", "time-series", "feature-engineering", "predictive-maintenance"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "pydantic>=2.0",
+    "loguru",
+    "annotated-types",
+]
+
+[project.optional-dependencies]
+hpo = [
+    "optuna",
+]
+knn = [
+    "scikit-learn",
+]
+all = [
+    "tsa-suite[hpo,knn]",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
+test = [
+    "pytest>=7.0",
+]
+
+[project.scripts]
+tsas = "tsas.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tsas"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/tsas",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP"]
+ignore = ["E501"]
+

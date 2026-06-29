@@ -1,0 +1,35 @@
+[
+  {
+    "comment": "num 类型示例：连续数值型",
+    "name": "temperature",
+    "type": "num",
+    "lb": 200,
+    "ub": 400
+  },
+  {
+    "comment": "int 类型示例：整数型",
+    "name": "reaction_steps",
+    "type": "int",
+    "lb": 1,
+    "ub": 5
+  },
+  {
+    "comment": "pow 类型示例：对数尺度（浓度、学习率等）",
+    "name": "concentration",
+    "type": "pow",
+    "lb": 0.001,
+    "ub": 1.0,
+    "base": 10
+  },
+  {
+    "comment": "cat 类型示例：类别型，必须列出所有可能取值",
+    "name": "solvent",
+    "type": "cat",
+    "categories": ["ethanol", "acetone", "methanol", "water"]
+  },
+  {
+    "comment": "bool 类型示例：布尔型（是/否）",
+    "name": "use_stirring",
+    "type": "bool"
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "forecast_data": "/Users/panhui/Desktop/ph_hw/lanqu_code/TSA-Suite/data/synthetic/forecast_demo.csv",
+  "split_counts": {
+    "train": 700,
+    "val": 150,
+    "test": 150
+  },
+  "target_column": "target_shuiwei_chazhi",
+  "feature_columns": [
+    "diya_qibao_shuiwei",
+    "diya_qibao_shuiwei_youxuanzhi",
+    "diya_qibao_shuiwei_celiang_waihuan",
+    "diya_qibao_shuiwei_mubiao_pid",
+    "ningjie_shuiliuliang_1",
+    "ningjie_shuiliuliang_2",
+    "ningjie_shuiliuliang_youxuanzhi",
+    "ningjie_shuiliuliang_celiang_neihuan",
+    "ningjie_shuiliuliang_mubiao_pid",
+    "gaoya_geishuiliuliang_1",
+    "gaoya_geishuiliuliang_2",
+    "gaoya_geishuiliuliang_3",
+    "gaoya_geishuiliuliang_youxuanzhi",
+    "chuyangqi_tiaojiefa_weizhifankui",
+    "chuyangqi_tiaojiefa_pid_sheding",
+    "ranji_fuhe",
+    "qiji_fuhe",
+    "chuyangqi_rukou_yali",
+    "diya_qibao_yali_1",
+    "diya_qibao_yali_2",
+    "diya_qibao_yali_3",
+    "diya_qibao_yali_youxuanzhi",
+    "diya_zhuqiliuliang_youxuanzhi",
+    "gaoya_jianwenshui_liuliang",
+    "ranji_paiqi_wendu",
+    "mubiao_diya_qibao_shuiwei",
+    "pidzidong_shoudong",
+    "gongkuang"
+  ]
+}
